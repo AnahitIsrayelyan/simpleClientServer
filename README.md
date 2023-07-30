@@ -1,6 +1,6 @@
 # simpleClientServerPrograms
 
-#brokerClientServer
+1. brokerClientServer
 
 Architecture: Broker Pattern
 
@@ -46,7 +46,7 @@ Note:
     should be implemented.
 
 
-#webClientServer
+2. webClientServer
 
 This is a basic implementation of a web client-server program in Python. The program supports a simple HTTP-based protocol, where the client can request a file from the server using a GET request, and the server responds with the file content if it exists. The client can choose to keep the connection alive for multiple requests or close it after each request.
 Client
