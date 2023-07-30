@@ -1,4 +1,6 @@
-# simpleClientServerProgram
+# simpleClientServerPrograms
+
+#brokerClientServer
 
 Architecture: Broker Pattern
 
@@ -43,5 +45,29 @@ Note:
     The provided code does not handle error cases extensively. In a production environment, additional error handling and input validations
     should be implemented.
 
+
+#webClientServer
+
+This is a basic implementation of a web client-server program in Python. The program supports a simple HTTP-based protocol, where the client can request a file from the server using a GET request, and the server responds with the file content if it exists. The client can choose to keep the connection alive for multiple requests or close it after each request.
+Client
+
+Components:
+
+    The client sends GET requests to the server, specifying the filename (link) as input. It then receives and prints the server's response. The
+    client can repeatedly send requests and has the option to continue running the program or close the connection.
+    Server
+
+    The server listens on a specific IP address and port number, awaiting incoming client connections. Upon receiving a request, it parses the 
+    HTTP headers to extract the requested filename. If the client requests to close the connection, the server terminates gracefully. Otherwise, 
+    it attempts to retrieve the content of the requested file (if exists) and sends it back to the client as the HTTP response.
+
+Note:
+
+    Please note that this implementation is minimalistic and serves as an educational example. In a real-world scenario, you would need to 
+    handle various edge cases, implement error handling, and possibly consider using a more robust web server framework for production use.
+Usage:
+
+    To run the program, start the server first and then run the client. The server serves files from the "public" directory, and the client can 
+    request files by providing the filename (e.g., /index.html). You can also connect from real web browser typing 'http://127.0.0.1:8080/index.html'.
 
 
